@@ -1,0 +1,137 @@
+<script lang="ts">
+	import '../../styles.postcss';
+	import '../../md-render.postcss';
+	import Instructions from '$lib/components/Instructions.svelte';
+
+	import { page } from '$app/stores';
+
+	const navItems = [
+		{
+			path: '/',
+			name: 'Home',
+			description: ''
+		},
+		{
+			path: '/minor',
+			name: 'Minor Arcanum',
+			description: 'Generate a minor arcanum card'
+		},
+		{
+			path: '/major',
+			name: 'Major Arcanum',
+			description: 'Generate a major arcanum card'
+		},
+		{
+			path: '/free',
+			name: 'Free Write',
+			description: 'Write whatever you want in the Stonetop style'
+		}
+	];
+
+	$: currentNav = navItems.find(
+		(navItem) => $page.route.id === `/(app)${navItem.path}`.replace(/\/$/, '')
+	);
+	$: console.log('currentNav', currentNav);
+	$: console.log(
+		$page.route.id,
+		`/(app)${currentNav?.path.replace(/\/$/, '')}`,
+		$page.route.id === `/(app)${currentNav?.path.replace(/\/$/, '')}`
+	);
+</script>
+
+<nav>
+	{#each navItems as navItem}
+		{@const isSelected = $page.route.id === `/(app)${navItem.path.replace(/\/$/, '')}`}
+		<div class:selected={isSelected}>
+			{#if isSelected}
+				<img src="/img/spiral-bullet.png" alt="" />
+			{/if}
+			<a href={navItem.path}>{navItem.name}</a>
+			{#if isSelected}
+				<img src="/img/spiral-bullet.png" alt="" />
+			{/if}
+		</div>
+	{/each}
+</nav>
+<div class="page-container">
+	<div class="description">{currentNav?.description}</div>
+	<!-- <hr /> -->
+	<slot />
+</div>
+
+<hr />
+
+<div class="instructions">
+	<Instructions />
+</div>
+
+<style>
+	.page-container {
+		margin: auto;
+	}
+	nav {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+		align-items: center;
+		background-color: white;
+
+		font-family: 'Avara';
+		font-size: 1.5rem;
+	}
+
+	nav > div {
+		flex-grow: 1;
+		border-top: 2px solid black;
+		border-left: 2px solid black;
+		border-bottom: 2px solid black;
+		display: flex;
+		justify-content: center;
+		padding: 0.5rem;
+	}
+
+	nav > div > a {
+		color: #888;
+	}
+
+	nav > div > img {
+		width: 1.5rem;
+		height: 1.5rem;
+		margin: 0 0.5rem;
+	}
+
+	nav > div.selected {
+		border-bottom-color: rgba(0, 0, 0, 0);
+	}
+
+	nav > div.selected > a {
+		color: black;
+		text-decoration: underline 2px black;
+	}
+
+	nav a {
+		text-decoration: none;
+		text-align: center;
+		max-width: 100%;
+		color: black;
+
+		/* text-transform: uppercase; */
+		font-weight: bold;
+	}
+
+	nav a:hover {
+		text-decoration: underline;
+	}
+
+	.description {
+		font-size: 1.25em;
+		text-align: center;
+		margin: 1rem auto;
+
+		max-width: 30rem;
+	}
+
+	.instructions {
+		max-width: 55rem;
+		margin: auto;
+	}
+</style>

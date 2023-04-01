@@ -1,0 +1,217 @@
+.md-render {
+	letter-spacing: -0.006em;
+
+	& img {
+		margin: 1em auto;
+	}
+
+	& p {
+		margin-top: 0.25em;
+		line-height: 1.15em;
+	}
+	& p + p {
+		margin-top: 0.69em;
+	}
+
+	& ul {
+		list-style-type: none;
+		padding-left: 0;
+
+		& li {
+			padding-left: 2em;
+			background-image: url('/img/spiral-bullet.png');
+			background-position: 0 0.1em;
+			background-size: 0.6em;
+			background-repeat: no-repeat;
+		}
+	}
+
+	/* PCTODO Make this and the other title slightly smaller
+	Ok just fix all the font sizes later
+	h1 is pretending to be a title */
+	& h1 {
+		text-align: center;
+		font-size: 1.5em;
+		margin-bottom: -0.15em;
+	}
+
+	/* h2 is the small back title on major arcana "mysteries of ..." */
+	& h2 {
+		text-align: center;
+		font-size: 1em;
+		margin-bottom: 0em;
+	}
+
+	/* h3 is the big section headers */
+	& h3 {
+		border-top: 0.125em solid black;
+		border-bottom: 0.05em solid black;
+		margin: 0.5em 0 0.5em 0;
+		padding: 0.4em 0 0.15em 0;
+		font-size: 1.35em;
+	}
+
+	& h4 {
+		padding: 0.5em 0 0.25em 0;
+		font-size: 1.1em;
+		border-top: 0.125em solid black;
+		border-bottom: 0.05em solid black;
+	}
+
+	& h5 {
+		font-size: 1em;
+	}
+
+	/* Smaller headers */
+	& h4,
+	h5,
+	h6 {
+		font-family: 'Adobe Caslon Pro';
+		font-weight: 'bold';
+		text-transform: uppercase;
+		word-spacing: 0.05em;
+		margin: 0;
+
+		/* Moves with hold have the bubbles to the right */
+		& span.progress {
+			float: right;
+		}
+	}
+
+	& table {
+		width: 100%;
+		margin-top: 0.5em;
+
+		& th.numeric-header {
+			font-family: 'Adobe Caslon Pro';
+			font-weight: 'bold';
+			font-size: 0.9em;
+			vertical-align: bottom;
+
+			width: 1px;
+			white-space: nowrap;
+		}
+
+		& th:not(.numeric-header) {
+			padding-bottom: 0.15em;
+		}
+
+		border-collapse: collapse;
+	}
+
+	& thead {
+		border-top: 0.125em solid black;
+		border-bottom: 0.125em dotted black;
+	}
+
+	& tbody {
+		cellspacing: 0.25em;
+	}
+
+	& th {
+		border-spacing: 0;
+
+		line-height: 0.875em;
+		padding-bottom: 0.1em;
+
+		font-size: 1.25em;
+		text-transform: lowercase;
+		text-align: left;
+		font-family: 'FellTypeSC Roman';
+	}
+
+	& tr:first-child td {
+		padding-top: 0.75em;
+	}
+	& td {
+		padding-top: 0.25em;
+		min-width: 2.5em;
+	}
+
+	& hr {
+		margin: 0.63em 0;
+		border-top: 0.125em dotted black;
+		border-bottom: none;
+	}
+
+	& a {
+		color: black;
+	}
+
+	& span.load {
+		font-size: 1.3em;
+		vertical-align: middle;
+		/* Use whatever the rest of the line is */
+		line-height: 0em;
+	}
+
+	& div.tags {
+		text-align: center;
+		margin-bottom: 0.5em;
+		font-size: 1em;
+
+		font-style: italic;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	& div.progress {
+		margin-top: 0.5em;
+		margin-bottom: 0.6em;
+		font-size: 0.95em;
+		text-align: center;
+	}
+
+	& span.progress {
+		font-size: 0.8em;
+		letter-spacing: -0.05em;
+		-webkit-text-stroke: 0.025em;
+		position: relative;
+		bottom: 0.05em;
+	}
+
+	.mark {
+		text-align: center;
+
+		.bubbles {
+			font-size: 0.8em;
+			-webkit-text-stroke: 0.05em;
+		}
+	}
+
+	.pseudo-list {
+		margin-left: 1.7em;
+		text-indent: -1.7em;
+
+		& p {
+			margin-top: 0.15em;
+		}
+	}
+
+	.checkboxes {
+		font-size: 0.8em;
+		-webkit-text-stroke: 0.075em;
+		letter-spacing: 0.05em;
+		vertical-align: baseline;
+
+		position: relative;
+		bottom: 0.05em;
+
+		margin-right: 1em;
+	}
+
+	.mm-bullet {
+		margin-right: 0.8em;
+	}
+
+	.indented {
+		margin-left: 1.95em;
+	}
+
+	.blank {
+		height: 1em;
+		margin: 0;
+	}
+}
