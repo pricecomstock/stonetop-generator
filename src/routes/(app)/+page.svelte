@@ -47,8 +47,20 @@
 		The arcana that come with the game have nice blocks with icons indicating creature type. I'm not
 		sure what the copyright on those icons is, and it would be a bit of effort and <i
 			>weird syntax</i
-		> to get the monster blocks laid out just as they are with the game's Arcana.
+		>
+		to get the monster blocks laid out just as they are with the game's Arcana.
 	</p>
+	<p>
+		For now, you can get reasonably close with the <code>{`{{monster ...}}`}</code> tag and other formatting.
+		See the table below.
+	</p>
+	<hr />
+	<h5><span class="checkboxes">▢</span>More Free Writing Options</h5>
+	<p>
+		The formatting so far is built specifically for Arcana, but things like two-column layouts would
+		allow more similar formatting to content in the book.
+	</p>
+	<hr />
 	<h5><span class="checkboxes">▢</span>Playbooks</h5>
 	<p>
 		It would definitely be a lot of work to capture all the flexibility that goes into a playbook,
