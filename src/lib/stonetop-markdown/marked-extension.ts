@@ -33,12 +33,17 @@ export const hooks = {
 			}
 		);
 
+		// Convert \mm and \gmm to ➤
+		processed = processed.replaceAll(
+			/\\g?mm\s+([^\n]+)/gi,
+			(match, p1) => `\n<div class="monster-move"><span class="mm-bullet">➤</span>${p1}</div>`
+		);
+
 		processed = processed.replaceAll(/{{list/gi, "<div class='pseudo-list'>\n");
-		processed = processed.replaceAll(/{{checkgroup/gi, "<div class='check-group'>\n");
 		processed = processed.replaceAll(/{{indent/gi, "<div class='indented'>\n");
 		processed = processed.replaceAll(
 			/{{monster/gi,
-			'<div class=\'monster\'><img src="img/creature-icon.png">\n'
+			'<div class=\'monster\'><img src="/img/creature-icon.png">\n'
 		);
 		processed = processed.replaceAll(/}}/gi, '</div>');
 
@@ -80,10 +85,6 @@ export const hooks = {
 
 		// Add extra newline before \check so it can work like bullets
 		processed = processed.replaceAll(/\n\\check/gi, '\n\n\\check');
-
-		// Convert \mm and \gmm to ➤
-		processed = processed.replaceAll(/\\mm\s*/gi, '\n<span class="mm-bullet">➤</span>');
-		processed = processed.replaceAll(/\\gmm\s*/gi, '\n<span class="mm-bullet">➤</span>');
 
 		return processed;
 	}
