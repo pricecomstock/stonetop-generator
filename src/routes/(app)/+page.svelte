@@ -20,11 +20,7 @@
 		rendering markdown into images and PDFs, and this scratched that itch.
 	</p>
 	<p>Hope you find it useful!</p>
-	<p>
-		Inspirations and influences include <a href="https://homebrewery.naturalcrit.com/"
-			>The Homebrewery</a
-		>, which makes D&D 5e content from Markdown.
-	</p>
+
 	<h3>Details</h3>
 	<p>
 		<b>How to Use.</b> You'll fill out the form and write Markdown. Check out the table at the bottom
@@ -40,6 +36,24 @@
 		<b>Inspirations and Influences.</b> Definitely
 		<a href="https://homebrewery.naturalcrit.com/">The Homebrewery</a>, which makes D&D 5e content
 		from Markdown.
+	</p>
+
+	<h3>Updates</h3>
+	<p><b>2023-04-02.</b> Initial Release</p>
+
+	<h3>Future Possibilities</h3>
+	<h5><span class="checkboxes">▢</span>Better Monster/Follower/NPC blocks</h5>
+	<p>
+		The arcana that come with the game have nice blocks with icons indicating creature type. I'm not
+		sure what the copyright on those icons is, and it would be a bit of effort and <i
+			>weird syntax</i
+		> to get the monster blocks laid out just as they are with the game's Arcana.
+	</p>
+	<h5><span class="checkboxes">▢</span>Playbooks</h5>
+	<p>
+		It would definitely be a lot of work to capture all the flexibility that goes into a playbook,
+		and I don't know how much work it would actually save versus laying it out manually using the
+		templates. But it might be neat!
 	</p>
 </div>
 

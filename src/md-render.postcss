@@ -64,8 +64,7 @@
 
 	/* Smaller headers */
 	& h4,
-	h5,
-	h6 {
+	h5 {
 		font-family: 'Adobe Caslon Pro';
 		font-weight: 'bold';
 		text-transform: uppercase;
@@ -75,6 +74,17 @@
 		/* Moves with hold have the bubbles to the right */
 		& span.progress {
 			float: right;
+		}
+	}
+
+	& h6 {
+		font-family: 'Avara';
+		font-weight: 'bold';
+		font-size: 1em;
+		margin: 0;
+
+		+ p {
+			margin-top: 0em;
 		}
 	}
 
@@ -202,6 +212,11 @@
 		margin-right: 1em;
 	}
 
+	.checkboxes.inline-choice {
+		margin-left: 0.5em;
+		margin-right: 0.25em;
+	}
+
 	.mm-bullet {
 		margin-right: 0.8em;
 	}
@@ -213,5 +228,64 @@
 	.blank {
 		height: 1em;
 		margin: 0;
+	}
+
+	.monster {
+		& img {
+			aspect-ratio: 1/1;
+			height: 2em;
+
+			float: left;
+
+			margin: 0 0.5em 0 0;
+		}
+	}
+
+	& div.statframe {
+		float: right;
+		display: inline-flex;
+		position: relative;
+		background: url('/img/statframe.png') no-repeat;
+		aspect-ratio: 3/2;
+		height: 3em;
+		background-size: contain;
+
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		/* Room for note */
+		margin-bottom: 1em;
+
+		margin-top: 0.5em;
+		margin-right: 0.25em;
+
+		.name {
+			font-size: 0.9em;
+			font-weight: bold;
+			text-align: center;
+			background-color: white;
+			padding: 0 0.2em;
+
+			position: absolute;
+			top: -0.4em;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+
+		.value {
+			text-align: center;
+			font-size: 1.5em;
+			font-weight: normal;
+
+			/* just compensating for font baseline */
+			padding-top: 0.25em;
+		}
+
+		.note {
+			font-size: 0.75em;
+			position: absolute;
+			bottom: -1.25em;
+		}
 	}
 }

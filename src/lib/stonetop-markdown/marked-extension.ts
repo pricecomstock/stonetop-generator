@@ -7,20 +7,39 @@ export const hooks = {
 
 		// Convert \check to ▢ with checkbox class
 		// Note consuming the following space
-		processed = processed.replaceAll(/(\n)?(\\check[0-9]*\s*)/gi, (match, p1) => {
+		processed = processed.replaceAll(/(\n)?(\\check[0-9]*\s*)/gi, (match) => {
 			const number = match.replace(/\D/gi, '');
 			const count = parseInt(number ? number[0] : '1');
 			const checks = '▢ '.repeat(count).trim();
 			return `\n<span class="checkboxes">${checks}</span>`;
-			// const startOfLine = Boolean(p1);
-			// return startOfLine
-			// 	? `<div class="checkboxes">${checks}</div>`
-			// 	: `<span class="checkboxes">${checks}</span>`;
 		});
+		// Inline check marks
+		processed = processed.replaceAll(/(\\icheck[0-9]*\s*)/gi, (match) => {
+			const number = match.replace(/\D/gi, '');
+			const count = parseInt(number ? number[0] : '1');
+			const checks = '▢ '.repeat(count).trim();
+			return `\n<span class="checkboxes inline-choice">${checks}</span>`;
+		});
+
+		// Replace \statframe with a .statframe div, accepting parameters for name, value, and note
+		processed = processed.replaceAll(
+			/\\statframe\s*{([^}]*)}\s*{([^}]*)}\s*{([^}]*)}/gi,
+			(match, p1, p2, p3) => {
+				return `<div class="statframe">
+	<div class="name">${p1}</div>
+	<div class="value">${p2}</div>
+	<div class="note">${p3}</div>
+</div>`;
+			}
+		);
 
 		processed = processed.replaceAll(/{{list/gi, "<div class='pseudo-list'>\n");
 		processed = processed.replaceAll(/{{checkgroup/gi, "<div class='check-group'>\n");
 		processed = processed.replaceAll(/{{indent/gi, "<div class='indented'>\n");
+		processed = processed.replaceAll(
+			/{{monster/gi,
+			'<div class=\'monster\'><img src="img/creature-icon.png">\n'
+		);
 		processed = processed.replaceAll(/}}/gi, '</div>');
 
 		return processed;

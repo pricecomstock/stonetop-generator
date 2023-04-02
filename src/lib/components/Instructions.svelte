@@ -20,9 +20,31 @@
 		'##### H5 Move',
 		'##### \\check Selectable move',
 		'##### \\check Move with Hold \\prog4\n\n##### \\check Move with Hold \\hold2',
-		"###### H6 This isn't for anything yet",
+		'###### H6 Creature/NPC/Follower Name',
 		'Try taking notes in this blank space\n::::\nPretty neat!',
 		'an image\n![](https://placehold.co/200x100)',
+		'\\statframe {Stat} {0} {A note}\n\\statframe {} {} {Optional!}\n\\statframe {} {} {}',
+		`{{monster
+  ###### A Monster
+  *undead, spirit, magical*
+  \\statframe {HP} {} {Max 6}
+  
+  {{list
+  **Cost** The fear of the innocent
+  {{indent(Loyalty \\prog3)}}
+  
+  
+  **Instinct** to show up unannounced
+
+  {{indent
+  \\mm Reveal something
+  \\mm Spot a weakness
+  }}
+
+  }}
+  **Damage** punchers 1d4
+}}`,
+		'Use icheck to offer \\icheck a choice \\icheck second\nchoice \\icheck third choice inline',
 		'|1d6|result|\n|---|---|\n|1-2|really bad|\n|3-4|pretty ok|\n|5-6|quite good|'
 	];
 </script>
