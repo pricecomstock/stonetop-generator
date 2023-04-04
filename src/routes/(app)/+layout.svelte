@@ -33,6 +33,10 @@
 	);
 </script>
 
+<div class="mobile-warning">
+	Hello, if you're viewing this website on a mobile device, it's going to be janky and you may have
+	to scroll around strangely to see everything. But, it will technically work!
+</div>
 <nav>
 	{#each navItems as navItem}
 		{@const isSelected = $page.route.id === `/(app)${navItem.path.replace(/\/$/, '')}`}
@@ -130,5 +134,24 @@
 		max-width: min(100%, 55rem);
 		overflow-x: scroll;
 		margin: auto;
+	}
+
+	.mobile-warning {
+		width: 100vw;
+		min-height: 3rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		text-align: center;
+		padding: 1rem;
+
+		background-color: #fb9;
+	}
+
+	@media screen and (min-width: 600px) {
+		.mobile-warning {
+			display: none !important;
+		}
 	}
 </style>
