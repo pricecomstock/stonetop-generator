@@ -149,7 +149,7 @@
 		background-color: #fb9;
 	}
 
-	@media screen and (min-width: 750px) {
+	@media screen and (min-width: 700px) {
 		.mobile-warning {
 			display: none !important;
 		}
