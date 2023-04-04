@@ -31,12 +31,6 @@
 	$: currentNav = navItems.find(
 		(navItem) => $page.route.id === `/(app)${navItem.path}`.replace(/\/$/, '')
 	);
-	$: console.log('currentNav', currentNav);
-	$: console.log(
-		$page.route.id,
-		`/(app)${currentNav?.path.replace(/\/$/, '')}`,
-		$page.route.id === `/(app)${currentNav?.path.replace(/\/$/, '')}`
-	);
 </script>
 
 <nav>
@@ -68,6 +62,7 @@
 <style>
 	.page-container {
 		margin: auto;
+		padding: 1rem;
 	}
 	nav {
 		display: grid;
@@ -80,12 +75,13 @@
 	}
 
 	nav > div {
-		flex-grow: 1;
+		place-self: stretch;
 		border-top: 2px solid black;
 		border-left: 2px solid black;
 		border-bottom: 2px solid black;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		padding: 0.5rem;
 	}
 
@@ -131,7 +127,8 @@
 	}
 
 	.instructions {
-		max-width: 55rem;
+		max-width: min(100%, 55rem);
+		overflow-x: scroll;
 		margin: auto;
 	}
 </style>

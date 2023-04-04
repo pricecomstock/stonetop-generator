@@ -26,6 +26,15 @@
 		}
 	}
 
+	& li.question {
+		list-style-type: none;
+		padding-left: 2em;
+		background-image: url('/img/spiral-pointy.png');
+		background-position: 0 0.1em;
+		background-size: 0.9em;
+		background-repeat: no-repeat;
+	}
+
 	/* PCTODO Make this and the other title slightly smaller
 	Ok just fix all the font sizes later
 	h1 is pretending to be a title */
@@ -86,6 +95,12 @@
 		+ p {
 			margin-top: 0em;
 		}
+	}
+
+	& blockquote {
+		padding: 0.5em;
+		margin: 0.5em 0;
+		border: 0.125em dotted black;
 	}
 
 	& table {

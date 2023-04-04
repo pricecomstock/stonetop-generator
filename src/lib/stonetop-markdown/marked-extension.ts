@@ -39,6 +39,11 @@ export const hooks = {
 			(match, p1) => `\n<div class="monster-move"><span class="mm-bullet">➤</span>${p1}</div>`
 		);
 
+		processed = processed.replaceAll(
+			/\\q\s+([^\n]+)/gi,
+			(match, p1) => `<li class="question">${p1}</li>`
+		);
+
 		processed = processed.replaceAll(/{{list/gi, "<div class='pseudo-list'>\n");
 		processed = processed.replaceAll(/{{indent/gi, "<div class='indented'>\n");
 		processed = processed.replaceAll(
@@ -69,7 +74,7 @@ export const hooks = {
 			const number = match.replace(/\D/gi, '');
 			const count = parseInt(number ? number[0] : '1');
 			const mark = '◯ '.repeat(count).trim();
-			return `<div class="mark">${p3} <span class="bubbles">${mark}</span></div>`;
+			return `\n<div class="mark">${p3} <span class="bubbles">${mark}</span></div>`;
 		});
 
 		processed = processed.replaceAll(/(\n)?(\\load[0-9]*)/gi, (match, p1) => {

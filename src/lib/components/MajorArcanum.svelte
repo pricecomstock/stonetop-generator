@@ -29,6 +29,7 @@
 			load={majorArcanum.load}
 			loadNote={majorArcanum.loadNote}
 			tags={majorArcanum.tags}
+			monogram={majorArcanum.monogram}
 		/>
 	</div>
 	{#if renderMode === RenderMode.PDF_PRINT}
@@ -38,7 +39,13 @@
 		<div class="page-break" />
 	{/if}
 	<div class="back">
-		<MajorArcanumSide {scale} sideLabel="back" content={majorArcanum.backMd} tags={[]} />
+		<MajorArcanumSide
+			{scale}
+			sideLabel="back"
+			content={majorArcanum.backMd}
+			tags={[]}
+			monogram={majorArcanum.monogram}
+		/>
 	</div>
 </div>
 
@@ -104,11 +111,11 @@
 		break-after: always;
 	}
 
-	.half-page-filler {
+	/* .half-page-filler {
 		aspect-ratio: 5.5/8.5;
 		width: 5.5in;
 
 		border-radius: 1rem;
 		border: 3px dashed black;
-	}
+	} */
 </style>

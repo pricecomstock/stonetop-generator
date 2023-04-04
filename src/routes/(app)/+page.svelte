@@ -24,22 +24,39 @@
 	<h3>Details</h3>
 	<p>
 		<b>How to Use.</b> You'll fill out the form and write Markdown. Check out the table at the bottom
-		of every page (including this one) for examples
+		of every page (including this one) for examples. Your work is saved in your browser, so it's ok to
+		refresh the page!
+	</p>
+	<hr />
+	<p>
+		<b>Author.</b> I'm <a href="https://pc.codes">Price Comstock</a>. I like games and I make
+		websites. Catch me lurking on the Stonetop discord as
+		<a href="http://discordapp.com/users/175756514110210050">price#0873</a>
 	</p>
 	<hr />
 	<p>
 		<b>Stack.</b> I used <a href="https://kit.svelte.dev/">SvelteKit</a>. The site is mostly
-		client-side rendered. You can check out the source code on my Github.
+		client-side rendered. You can check out the source code on
+		<a href="https://github.com/pricecomstock/stonetop-generator">Github</a>.
 	</p>
 	<hr />
 	<p>
-		<b>Inspirations and Influences.</b> Definitely
+		<b>Feedback and Requests.</b> I think
+		<a href="https://github.com/pricecomstock/stonetop-generator/issues">Github issues</a> are probably
+		the best way to handle this!
+	</p>
+	<hr />
+	<p>
+		<b>Inspirations and Influences.</b> First, the wonderful design and content of Stonetop! Also
+		definitely
 		<a href="https://homebrewery.naturalcrit.com/">The Homebrewery</a>, which makes D&D 5e content
 		from Markdown.
 	</p>
 
 	<h3>Updates</h3>
-	<p><b>2023-04-02.</b> Initial Release</p>
+	<ul>
+		<li><b>2023-04-03.</b> Initial Release</li>
+	</ul>
 
 	<h3>Future Possibilities</h3>
 	<h5><span class="checkboxes">▢</span>Better Monster/Follower/NPC blocks</h5>
@@ -57,8 +74,8 @@
 	<hr />
 	<h5><span class="checkboxes">▢</span>More Free Writing Options</h5>
 	<p>
-		The formatting so far is built specifically for Arcana, but things like two-column layouts would
-		allow more similar formatting to content in the book.
+		The formatting so far is built specifically for Arcana and very basic free writing. But there
+		are a few formats seen throughout the books that would be nice to have.
 	</p>
 	<hr />
 	<h5><span class="checkboxes">▢</span>Playbooks</h5>

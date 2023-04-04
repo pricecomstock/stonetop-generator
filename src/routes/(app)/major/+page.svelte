@@ -7,7 +7,8 @@
 		tags as rawTags,
 		load,
 		loadNote,
-		majorArcanum
+		majorArcanum,
+		monogram
 	} from '$lib/stores/majorArcanum';
 
 	import MajorArcanum from '$lib/components/MajorArcanum.svelte';
@@ -27,8 +28,6 @@
 		renderMode = RenderMode.PNG;
 
 		await tick();
-
-		console.log(outputNode.clientHeight, outputNode.clientWidth);
 
 		errorMsg = '';
 		try {
@@ -90,6 +89,11 @@
 		<div class="field">
 			<label for="back">Back</label>
 			<MarkdownEditor bind:value={$backMd} />
+		</div>
+
+		<div class="field">
+			<label for="monogram">Number/Monogram</label>
+			<input name="monogram" id="monogram" bind:value={$monogram} />
 		</div>
 	</div>
 

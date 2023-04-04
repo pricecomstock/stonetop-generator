@@ -5,6 +5,7 @@ export interface MinorArcanum {
 	tags: string[];
 	frontMd: string;
 	backMd: string;
+	monogram: string;
 }
 
 export interface MajorArcanum {
@@ -15,4 +16,5 @@ export interface MajorArcanum {
 	tags: string[];
 	frontMd: string;
 	backMd: string;
+	monogram: string;
 }

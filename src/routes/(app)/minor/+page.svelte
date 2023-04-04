@@ -6,7 +6,8 @@
 		tags as rawTags,
 		load,
 		loadNote,
-		minorArcanum
+		minorArcanum,
+		monogram
 	} from '$lib/stores/minorArcanum';
 	import MinorArcanum from '$lib/components/MinorArcanum.svelte';
 	import MarkdownEditor from '$lib/components/MarkdownEditor.svelte';
@@ -83,6 +84,10 @@
 			<label for="back">Back</label>
 
 			<MarkdownEditor bind:value={$backMd} />
+		</div>
+		<div class="field">
+			<label for="monogram">Number/Monogram</label>
+			<input name="monogram" id="monogram" bind:value={$monogram} />
 		</div>
 	</div>
 

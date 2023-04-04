@@ -190,10 +190,18 @@ code {
 
 .editor-page {
 	display: grid;
-	grid-template-columns: min(35rem, 30%) 1fr;
+	grid-template-columns: min(50rem, 40%) 1fr;
 	grid-template-rows: 1fr;
-	grid-template-areas: 'editor output';
+	grid-template-areas:
+		'editor'
+		'output';
 	align-items: start; /* aligns the grid items to the top */
+}
+
+@media screen and (max-width: 1000px) {
+	.editor-page {
+		grid-template-columns: 1fr;
+	}
 }
 
 .input-form {

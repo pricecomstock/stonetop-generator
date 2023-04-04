@@ -28,6 +28,7 @@
 			load={minorArcanum.load}
 			loadNote={minorArcanum.loadNote}
 			tags={minorArcanum.tags}
+			monogram={minorArcanum.monogram}
 		/>
 	</div>
 	{#if renderMode === RenderMode.PDF_PRINT}
@@ -37,7 +38,13 @@
 		<div class="page-break" />
 	{/if}
 	<div class="back">
-		<MinorArcanumSide {scale} sideLabel="back" content={minorArcanum.backMd} tags={[]} />
+		<MinorArcanumSide
+			{scale}
+			sideLabel="back"
+			content={minorArcanum.backMd}
+			tags={[]}
+			monogram={minorArcanum.monogram}
+		/>
 	</div>
 </div>
 
